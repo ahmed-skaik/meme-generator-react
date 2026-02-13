@@ -1,16 +1,74 @@
-# React + Vite
+# Meme Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18-blue)
+![Vite](https://img.shields.io/badge/Vite-5-purple)
+![Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-brightgreen)
 
-Currently, two official plugins are available:
+An interactive meme generator built with React and Vite.  
+Users can enter custom top and bottom text and generate random meme images fetched from an external API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌐 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 https://meme-gen-app-react.netlify.app/
 
-## Expanding the ESLint configuration
+The deployed version is hosted on Netlify and automatically updates on redeployment.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Preview
+
+![Meme Generator Screenshot](./meme_generator_screenshot.png)
+
+---
+
+## 🚀 Features
+
+- Two controlled input fields:
+  - Top meme text
+  - Bottom meme text
+- Random meme image generation
+- External API integration
+- Real-time text overlay rendering
+- Responsive layout
+
+---
+
+## 🛠 Tech Stack
+
+Frontend:
+- React
+- JavaScript
+- Vite
+
+API:
+- Imgflip Meme API  
+  https://api.imgflip.com/get_memes
+
+Deployment:
+- Netlify
+
+---
+
+## ⚙️ Application Flow
+
+1. On initial render, the application fetches meme templates from:
+   https://api.imgflip.com/get_memes
+
+2. The API returns a list of meme image URLs.
+
+3. When the user clicks **"Get a new meme image"**:
+   - A random meme is selected from the fetched list
+   - The displayed image updates
+
+4. The text inputs dynamically update the meme overlay using React state.
+
+---
+
+## 📦 Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ahmed-skaik/meme-generator-react.git
